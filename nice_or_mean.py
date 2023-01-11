@@ -30,12 +30,12 @@ def describe_game(name):
     # meaning, if we do not already have this user's name,
     # then they are a new player and we need to get their name
     if name != "":
-        print(Fore.GREEN + "\nThank you for playing again, {}!".format(name))
+        print(Fore.GREEN + Back.MAGENTA + "\nThank you for playing again, {}!".format(name))
     else:
         stop = True
         while stop:
             if name == "":
-                name = input(Fore.GREEN + "\nWhat is your name? \n>>> ").capitalize()
+                name = input(Fore.GREEN + Back.MAGENTA +  "\nWhat is your name? \n>>> ").capitalize()
                 if name != "":
                     print("\nWelcome, {}!".format(name))
                     print("\nIn this game, you will be greeted \nby several different people. \nYou can choose to be nice or mean")
