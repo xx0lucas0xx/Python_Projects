@@ -3,7 +3,7 @@
 #
 # Author:   Lucas K. English
 #
-# Purpose:  Learning to deal with databases in python
+# Purpose:  To look through fileNames and only add the .txt files to the test1 DB
 #  
 #
 
