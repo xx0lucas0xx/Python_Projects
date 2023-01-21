@@ -6,6 +6,7 @@ class plant:
     climate = "Humid"
     sun_exposure = "8 hours +"
 
+    # input plant to track
     def inputPlant(self):
         entry_name = input("What is the name of the plant you'd like to track?\n>>>")
         entry_climate = input("What's your plant's climate?\n>>>")
