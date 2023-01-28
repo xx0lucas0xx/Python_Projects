@@ -8,7 +8,7 @@
 # Purpose:  To make a student program gui with info inputs, a submission and a
 #           delete function.
 #
-# Tested OS:  This code was written and tested to work with Windows 10.
+# Tested OS:  This code was written and tested to work with Windows 11.
 
 import os
 from tkinter import *
