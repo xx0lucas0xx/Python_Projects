@@ -20,9 +20,11 @@ obj._protectedVar = 'Oranges' # passing in the string to the protected var
 print("I love " + obj._protectedVar + " they are very tasty")
 
 
+# establishing a class called veggie
+
 class veggie:
     def __init__(self):
-        self.__privateVar = 'Carrots'
+        self.__privateVar = 'Carrots' # adding a private variable
 
     def getPrivate(self):
         print(self.__privateVar)
@@ -31,8 +33,8 @@ class veggie:
         self.__privateVar = private
 
 obj = veggie()
-obj.getPrivate()
-obj.setPrivate('Cucumber')
+obj.getPrivate() 
+obj.setPrivate('Cucumbers') # changing the private variable
 obj.getPrivate()
 
 
