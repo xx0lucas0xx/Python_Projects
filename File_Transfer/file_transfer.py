@@ -13,9 +13,16 @@
 
 import tkinter as tk
 from tkinter import *
+
 import tkinter.filedialog
+
 import os
 import shutil
+
+import datetime
+from datetime import timedelta
+from datetime import datetime
+
 
 # setting up a GUI window
 class ParentWindow(Frame):
@@ -71,12 +78,13 @@ class ParentWindow(Frame):
         # The .insert method will insert the user selection to the destination_dir Entry widget
         self.destination_dir.insert(0, selectDestDir)
 
-     
-###########################################################################
-
+##########################################################
         
     # Creates function to transfer files from from one directory to another
     def transferFiles(self):
+        # Gets current time
+        now = datetime.now()
+        current_time = now.strftime("%H: %M: %S")
         # Gets source directory
         source = self.source_dir.get()
         # Gets destination directory
@@ -85,12 +93,23 @@ class ParentWindow(Frame):
         source_files = os.listdir(source)
         # Runs through each file in the source directory
         for i in source_files:
-            # Moves each files from the source to the destination
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
+            ## datetime.timedelta
+            file_time = os.stat(source)
+            # Moves each files from the source to the destination then prints time
+            if file_time < 24:
+                
+                shutil.move(source + '/' + i, destination)
+                print(i + ' was successfully transferred')
 
 
-############################################################################
+
+
+
+
+
+
+            
+
 
     # Creates function to exit program
     def exit_program(self):
@@ -102,6 +121,10 @@ class ParentWindow(Frame):
         self.exit_btn = Button(text="Exit", width=20, command=self.exit_program)
         # Positions the Exit button
         self.exit_btn.grid(row=2, column=2, padx=(10, 40), pady=(0, 15))
+
+
+## creating a function where every file added or edited in the last 24 hours will be transfered to the
+## customer destination folder
                                
         
 
