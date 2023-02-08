@@ -17,11 +17,15 @@ from tkinter import *
 import tkinter.filedialog
 
 import os
+import time
 import shutil
+
+import os.path as path
+
 
 import datetime
 from datetime import timedelta
-from datetime import datetime
+
 
 
 # setting up a GUI window
@@ -82,26 +86,28 @@ class ParentWindow(Frame):
         
     # Creates function to transfer files from from one directory to another
     def transferFiles(self):
-        # Gets current time
-        now = datetime.now()
-        current_time = now.strftime("%H: %M: %S")
         # Gets source directory
         source = self.source_dir.get()
         # Gets destination directory
         destination = self.destination_dir.get()
         # Gets a list of files in the source directory
         source_files = os.listdir(source)
+        
         # Runs through each file in the source directory
         for i in source_files:
-            ## datetime.timedelta
-            file_time = os.stat(source)
-            # Moves each files from the source to the destination then prints time
-            if file_time < 24:
-                
+            # Gets info of files last update/new file from its source
+            grab = os.path.getmtime(source + '/' + i)
+            # Gets timestamp specificaly
+            mod_time = datetime.datetime.fromtimestamp(grab)
+            # Gets current time
+            now = datetime.datetime.now()
+            # Setting up the diffrence using timedelta
+            day_ago = now - datetime.timedelta(hours = 24)
+            # Moving the files to diffrent dir if added/updated in last 24 hours
+            if mod_time > day_ago:
+                # Moves each files from the source to the destination
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred')
-
-
 
 
 
