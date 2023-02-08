@@ -24,13 +24,14 @@ class ParentWindow(Frame):
         self.btn.grid(row =1, column = 0, padx = (10, 10), pady = (10, 10),sticky = E + S)
 
         # adding button for custom HTML page
-        self.btn = Button(self.master, text = "Submit Custom Text", width = 30, height = 2, command=self.defaultHTML)
-        self.btn.grid(row =1, column = 1, padx = (10, 10), pady = (10, 10),sticky = E + S)
+        self.btn = Button(self.master, text = "Submit Custom Text", width = 30, height = 2, command=self.customHTML)
+        self.btn.grid(row = 1, column = 1, padx = (10, 10), pady = (10, 10),sticky = E + S)
 
         
-
+        # adding text entry
+        self.txtEntry = Entry(self.master, font=("Helvetica", 12))
+        self.txtEntry.grid(row = 2, column = 0, padx = (30, 15), pady = (10, 10), columnspan = 3, sticky = W + E)
    
-    
     # adding functionality to the default html button
     def defaultHTML(self):
         htmlText = "We're having a great time aren't we?"
@@ -44,8 +45,8 @@ class ParentWindow(Frame):
     # adding functionality to the custom HTML page
     def customHTML(self):
         htmlFile = open("index.html", "w")
-        entry = Entry(self)
-        htmlContent = "<html>\n<body>\n<h1>" + Entry()( + "</h1>\n</body>\n</html>"
+        entry = self.txtEntry.get()
+        htmlContent = "<html>\n<body>\n<h1>" + entry + "</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
         htmlFile.close()
         webbrowser.open_new_tab("index.html")
