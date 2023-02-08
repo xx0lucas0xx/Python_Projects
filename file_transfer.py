@@ -81,8 +81,7 @@ class ParentWindow(Frame):
         self.destination_dir.delete(0, END)
         # The .insert method will insert the user selection to the destination_dir Entry widget
         self.destination_dir.insert(0, selectDestDir)
-
-##########################################################
+        
         
     # Creates function to transfer files from from one directory to another
     def transferFiles(self):
@@ -103,18 +102,12 @@ class ParentWindow(Frame):
             now = datetime.datetime.now()
             # Setting up the diffrence using timedelta
             day_ago = now - datetime.timedelta(hours = 24)
+            
             # Moving the files to diffrent dir if added/updated in last 24 hours
             if mod_time > day_ago:
                 # Moves each files from the source to the destination
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred')
-
-
-
-
-
-
-            
 
 
     # Creates function to exit program
@@ -128,9 +121,6 @@ class ParentWindow(Frame):
         # Positions the Exit button
         self.exit_btn.grid(row=2, column=2, padx=(10, 40), pady=(0, 15))
 
-
-## creating a function where every file added or edited in the last 24 hours will be transfered to the
-## customer destination folder
                                
         
 
