@@ -22,7 +22,7 @@ def start(nice=0,mean=0,name=""):
 
 def describe_game(name):
     """
-        check if this is a new game or not.
+        this function checks if this is a new game or not.
         if it is new, get the user's name.
         if it is not a new game, thank the player for
         playing again and continue with the game.

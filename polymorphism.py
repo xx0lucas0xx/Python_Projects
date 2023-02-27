@@ -10,7 +10,7 @@ class plant:
     def inputPlant(self):
         entry_name = input("What is the name of the plant you'd like to track?\n>>> ")
         entry_climate = input("What's your plant's climate?\n>>> ")
-        entry_sun_exposure = input("How much sun does your plant need?\n>>> ")
+        entry_sun_exposure = input("How many hours of sun does your plant need?\n>>> ")
         if (entry_name != "" and entry_climate != "" and entry_sun_exposure != ""):
             print(" {} needs a {} enviornment and requires {} hours of sun per day".format(entry_name, entry_climate, entry_sun_exposure))
 
