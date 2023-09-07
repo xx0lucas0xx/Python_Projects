@@ -6,92 +6,87 @@ Python 3.11
 OS Windows 11
 
 
-  Django_Checkbook_Project
-  
+    Django_Checkbook_Project
   
 [is a Django GUI that has fields to add users and update their accounts]
 
-  DjangoUniversity
+    DjangoUniversity
   
-  
-[is a Django GUI that to add students and their university information]
+[is a Django GUI that adds students and their university information]
 
-  File_Transfer 
-  
+    File_Transfer 
   
 [transfers files in selected folder that have been edited or created 
 in the last 24 hours to another selected folder.]
 
-  student_tracking_main
-  
+    student_tracking_main
   
 [a python GUI]
 
-
-  ArrayChal.py
+    ArrayChal.py
 [sorts a list of dog names in an array]
 
-  Challange1.py
+    Challange1.py
 [testing using sqlite]
 
-  Challange2_range.py
+    Challange2_range.py
 [using the range function on a short list of numbers]
 
-  Colorama.py
-[testing out the colorama module]
+    Colorama.py
+[testing out the Colorama module]
 
-  ErrorHandling.py
+    ErrorHandling.py
 [testing out errorhandling]
 
-  Python_if
+    Python_if
 [simple usage of an if else and elif statement]
 
-  TkInterTest.py
+    TkInterTest.py
 [a TkInter GUI to put in your first and last name]
 
-  abstraction.py
+    abstraction.py
 [utalizing abstraction]
 
-  app/app2.py
+    app/app2.py
 [practice calling another application]
 
-  encapsulation.py
+    encapsulation.py
 [showing use of different types of encapsulations]
 
-  inheritance.py
+    inheritance.py
 [demonstrating inheritance between parent and child classes]
 
-  name.py
-[name input that returns information on specific name]
+    name.py
+[name input that returns information on the specific name]
 
-  ourModule.py/printNum.py
+    ourModule.py/printNum.py
 [a simple multiplication module]
 
-  polymorphism.py
+    polymorphism.py
 [a set of questions are asked to track a plant and 
 input details about it]
 
-  programscope.py
+    programscope.py
 [using a simple local scope]
 
-  random.py
+    random.py
 [choses a random number between 1 and 100]
 
-  sqliteAsng.py
-[used for testing sqlite in IDLE]
+    sqliteAsng.py
+[used for testing SQLite in IDLE]
 
- test1.py 
+   test1.py 
 [using Parent and Child classes to display Organism information] 
 
-  test2.py
+    test2.py
 [creating a basic database table]
 
-  test3.py
+    test3.py
 [To look through fileNames and only add the .txt files to the test1 DB]
 
-  test4.py
-[basic Parent and Child clases about sales associate that will display the name and info of marked associates]
+    test4.py
+[basic Parent and Child classes about sales associates that will display the name and info of marked associates]
 
-  web_page_generator.py
+    web_page_generator.py
 [has a default html page and an option to put in and display custom text on an html file]
 the associate]
